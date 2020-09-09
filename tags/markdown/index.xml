@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>markdown on 各行棋道丶- 明朝即长路 惜取此时心</title>
+    <link>https://Jikeyyy.github.io/tags/markdown/</link>
+    <description>Recent content in markdown on 各行棋道丶- 明朝即长路 惜取此时心</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Wed, 25 Mar 2020 16:59:29 +0800</lastBuildDate>
+    
+	<atom:link href="https://Jikeyyy.github.io/tags/markdown/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Markdown基本语法</title>
+      <link>https://Jikeyyy.github.io/posts/markdown%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/</link>
+      <pubDate>Wed, 25 Mar 2020 16:59:29 +0800</pubDate>
+      
+      <guid>https://Jikeyyy.github.io/posts/markdown%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/</guid>
+      <description>&lt;p&gt;Markdown是一种纯文本格式的标记语言。通过简单的标记语法，它可以使普通文本内容具有一定的格式。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

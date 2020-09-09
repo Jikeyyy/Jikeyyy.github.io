@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>踩坑 on 各行棋道丶- 明朝即长路 惜取此时心</title>
+    <link>https://Jikeyyy.github.io/categories/%E8%B8%A9%E5%9D%91/</link>
+    <description>Recent content in 踩坑 on 各行棋道丶- 明朝即长路 惜取此时心</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sun, 05 Apr 2020 14:40:29 +0800</lastBuildDate>
+    
+	<atom:link href="https://Jikeyyy.github.io/categories/%E8%B8%A9%E5%9D%91/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Hugo博客部署到GitHub无法显示CSS、JS踩坑</title>
+      <link>https://Jikeyyy.github.io/posts/hugo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0github%E6%97%A0%E6%B3%95%E6%98%BE%E7%A4%BAcssjs%E8%B8%A9%E5%9D%91/</link>
+      <pubDate>Sun, 05 Apr 2020 14:40:29 +0800</pubDate>
+      
+      <guid>https://Jikeyyy.github.io/posts/hugo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0github%E6%97%A0%E6%B3%95%E6%98%BE%E7%A4%BAcssjs%E8%B8%A9%E5%9D%91/</guid>
+      <description>&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
+&lt;p&gt;最近我跟着网上的教学搭建了一个Hugo的个人博客。&lt;br&gt;
+一路顺利，直到部署到GitHub后出了问题。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

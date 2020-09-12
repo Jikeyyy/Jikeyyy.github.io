@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		 
+			
+  
+    <meta name="twitter:card" content="summary"/>
+    
+      <meta name="twitter:image" content="https://Jikeyyy.github.io/images/avatar.png" />
+    
+  
+  
+  <meta name="twitter:title" content="基于SSM框架的校园二手交易平台实战记录（一）"/>
+  <meta name="twitter:description" content="这篇文章主要是进行一个实战记录，方便自己以后回顾，也顺便分享我自己的项目开发历程，也希望能帮到像我一样的小白，文章中如有错误，希望大佬能够指出，感谢。"/>
+  
+    <meta name="twitter:site" content="@your_twitter_id"/>
+  
+  
+  
+  
+    <meta name="twitter:creator" content="@各行棋道丶"/>
+  
+
+
+
+		
+		<meta name="author" content="各行棋道丶">
+		<meta name="description" content="Site Description">
+		<meta name="generator" content="Hugo 0.66.0" />
+		<title>基于SSM框架的校园二手交易平台实战记录（一） &middot; 各行棋道丶- 明朝即长路 惜取此时心</title>
+		<link rel="shortcut icon" href="https://Jikeyyy.github.io/images/favicon.ico">
+		<link rel="stylesheet" href="https://Jikeyyy.github.io/css/style.css">
+		<link rel="stylesheet" href="https://Jikeyyy.github.io/css/highlight.css">
+
+		
+		<link rel="stylesheet" href="https://Jikeyyy.github.io/css/font-awesome.min.css">
+		
+
+		
+		<link href="https://Jikeyyy.github.io/index.xml" rel="alternate" type="application/rss+xml" title="各行棋道丶- 明朝即长路 惜取此时心" />
+		
+
+		
+	</head>
+
+    <body>
+       <nav class="main-nav">
+	
+	
+		<a href='https://Jikeyyy.github.io/'> <span class="arrow">←</span>Home</a>
+	
+	<a href='https://Jikeyyy.github.io/posts'>Archive</a>
+	<a href='https://Jikeyyy.github.io/tags'>Tags</a>
+	<a href='https://Jikeyyy.github.io/about'>About</a>
+
+	
+
+	
+	<a class="cta" href="https://Jikeyyy.github.io/index.xml">Subscribe</a>
+	
+</nav>
+
+
+        <section id="wrapper" class="post">
+            <article>
+                <header>
+                    <h1>
+                        基于SSM框架的校园二手交易平台实战记录（一）
+                    </h1>
+                    <h2 class="headline">
+                    Sep 12, 2020 16:59
+                    · 196 words
+                    · 1 minute read
+                      <span class="tags">
+                      
+                      
+                          
+                              <a href="https://Jikeyyy.github.io/tags/%E5%AE%9E%E6%88%98">实战</a>
+                          
+                      
+                      
+                      </span>
+                    </h2>
+                </header>
+                
+                  
+                    <div id="toc">
+                      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#项目描述">项目描述</a></li>
+    <li><a href="#项目预览">项目预览</a>
+      <ul>
+        <li><a href="#用户页面">用户页面</a></li>
+        <li><a href="#管理员页面">管理员页面</a></li>
+      </ul>
+    </li>
+    <li><a href="#项目开发">项目开发</a>
+      <ul>
+        <li><a href="#maven依赖">maven依赖</a></li>
+        <li><a href="#框架搭建">框架搭建</a></li>
+        <li><a href="#jsp">JSP</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+                    </div>
+                  
+                
+                <section id="post-body">
+                    <p>这篇文章主要是进行一个实战记录，方便自己以后回顾，也顺便分享我自己的项目开发历程，也希望能帮到像我一样的小白，文章中如有错误，希望大佬能够指出，感谢。</p>
+<h2 id="项目描述">项目描述</h2>
+<p>这是大学期间实训时的小组项目，我主要负责框架搭建和后端实现，也涉及了部分前端页面设计。</p>
+<ul>
+<li>JDK版本：1.7</li>
+<li>数据库：MySQL</li>
+<li>框架：Spring + SpringMVC + MyBatis</li>
+<li>服务器：Tomcat</li>
+<li>开发工具：MyEclipse 10</li>
+</ul>
+<p>二手商品交易平台是一个针对校园范围内使用的二手商品交易平台，是提供个人与个人之间的电子商务通道，用户即是买家又是卖家。平台中，用户可以发布自己的闲置二手物品，浏览校园内闲置商品信息，可以搜索自己想要购买的商品，来购买其他卖家的闲置商品，在确认购买商品后，会在订单中获得卖家的联系信息，与卖家私下交流完成交易。<br>
+该项目是针对校园中的学生，方便学生去获得周围闲置物品信息的平台，交易全是学生自主交易，本产品不承担相应的法律责任。</p>
+<h2 id="项目预览">项目预览</h2>
+<h3 id="用户页面">用户页面</h3>
+<p>登录页面<br>
+这是用户登录界面，管理员登录页面从登录按钮的左下链接进入。<br>
+<img src="https://img-blog.csdnimg.cn/20200618143923157.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MDUwNDgw,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述">
+注册页面<br>
+<img src="https://img-blog.csdnimg.cn/20200618144058738.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MDUwNDgw,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述">
+网站主页<br>
+<img src="https://img-blog.csdnimg.cn/20200618144225139.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MDUwNDgw,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述">
+商品页面<br>
+<img src="https://img-blog.csdnimg.cn/20200618144518707.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MDUwNDgw,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述">
+商品详情页<br>
+购买后，按订单中的联系方式，自行联系卖家，双方私下交易，平台不进行资金流转，这样就能有效避免商品与实物不符的问题。<br>
+<img src="https://img-blog.csdnimg.cn/20200618151807784.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MDUwNDgw,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述">
+商品发布页面<br>
+<img src="https://img-blog.csdnimg.cn/20200618144836419.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MDUwNDgw,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述">
+我的发布页面<br>
+<img src="https://img-blog.csdnimg.cn/20200618145100524.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MDUwNDgw,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述">
+商品信息修改页面<br>
+<img src="https://img-blog.csdnimg.cn/20200618145204524.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MDUwNDgw,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述">
+我的订单页面<br>
+<img src="https://img-blog.csdnimg.cn/20200618145330918.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MDUwNDgw,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述">
+修改密码页面<br>
+<img src="https://img-blog.csdnimg.cn/20200618150137169.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MDUwNDgw,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述">
+修改个人信息页面<br>
+<img src="https://img-blog.csdnimg.cn/20200618150235745.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MDUwNDgw,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h3 id="管理员页面">管理员页面</h3>
+<p>管理员主页<br>
+<img src="https://img-blog.csdnimg.cn/20200618150347261.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MDUwNDgw,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述">
+商品管理页面<br>
+<img src="https://img-blog.csdnimg.cn/20200618150446653.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MDUwNDgw,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述">
+商品详情页面<br>
+管理员的商品详情页面没有购买按钮。<br>
+<img src="https://img-blog.csdnimg.cn/20200618150618569.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MDUwNDgw,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述">
+用户管理页面<br>
+<img src="https://img-blog.csdnimg.cn/20200618150718528.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MDUwNDgw,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h2 id="项目开发">项目开发</h2>
+<h3 id="maven依赖">maven依赖</h3>
+<pre><code>&lt;dependency&gt;
+    &lt;groupId&gt;log4j&lt;/groupId&gt;
+    &lt;artifactId&gt;log4j&lt;/artifactId&gt;
+    &lt;version&gt;1.2.17&lt;/version&gt;
+ &lt;/dependency&gt;
+ &lt;dependency&gt;
+          &lt;groupId&gt;jstl&lt;/groupId&gt;
+          &lt;artifactId&gt;jstl&lt;/artifactId&gt;
+          &lt;version&gt;1.2&lt;/version&gt;
+ &lt;/dependency&gt;
+  &lt;!-- https://mvnrepository.com/artifact/commons-fileupload/commons-fileupload --&gt;
+&lt;dependency&gt;
+    &lt;groupId&gt;commons-fileupload&lt;/groupId&gt;
+    &lt;artifactId&gt;commons-fileupload&lt;/artifactId&gt;
+    &lt;version&gt;1.4&lt;/version&gt;
+&lt;/dependency&gt;
+  &lt;!-- Mysql的驱动包 --&gt;
+        &lt;dependency&gt;
+   &lt;groupId&gt;mysql&lt;/groupId&gt;
+   &lt;artifactId&gt;mysql-connector-java&lt;/artifactId&gt;
+   &lt;version&gt;5.1.21&lt;/version&gt;
+  &lt;/dependency&gt;
+  &lt;!-- dbcp坐标 --&gt;
+  &lt;dependency&gt;
+            &lt;groupId&gt;commons-dbcp&lt;/groupId&gt;
+            &lt;artifactId&gt;commons-dbcp&lt;/artifactId&gt;
+            &lt;version&gt;1.2.2&lt;/version&gt;
+        &lt;/dependency&gt;
+        &lt;!-- aspectj坐标 --&gt;
+        &lt;dependency&gt;
+   &lt;groupId&gt;org.aspectj&lt;/groupId&gt;
+   &lt;artifactId&gt;aspectjweaver&lt;/artifactId&gt;
+   &lt;version&gt;1.7.1&lt;/version&gt;
+  &lt;/dependency&gt;
+        &lt;!--  SpringMVC坐标 --&gt;
+        &lt;dependency&gt;
+   &lt;groupId&gt;org.springframework&lt;/groupId&gt;
+   &lt;artifactId&gt;spring-webmvc&lt;/artifactId&gt;
+   &lt;version&gt;3.2.0.RELEASE&lt;/version&gt;
+  &lt;/dependency&gt;
+  &lt;!-- Spring坐标 --&gt;
+  &lt;dependency&gt;
+   &lt;groupId&gt;org.springframework&lt;/groupId&gt;
+   &lt;artifactId&gt;spring-core&lt;/artifactId&gt;
+   &lt;version&gt;3.2.0.RELEASE&lt;/version&gt;
+  &lt;/dependency&gt;
+  
+  &lt;dependency&gt;
+           &lt;groupId&gt;org.springframework&lt;/groupId&gt;
+           &lt;artifactId&gt;spring-beans&lt;/artifactId&gt;
+           &lt;version&gt;3.2.0.RELEASE&lt;/version&gt;
+       &lt;/dependency&gt;
+       
+       &lt;dependency&gt;
+          &lt;groupId&gt;org.springframework&lt;/groupId&gt;
+          &lt;artifactId&gt;spring-context&lt;/artifactId&gt;
+          &lt;version&gt;3.2.0.RELEASE&lt;/version&gt;
+      &lt;/dependency&gt;
+       
+  &lt;!-- mybatis坐标 --&gt;
+  &lt;dependency&gt;
+   &lt;groupId&gt;org.mybatis&lt;/groupId&gt;
+   &lt;artifactId&gt;mybatis&lt;/artifactId&gt;
+   &lt;version&gt;3.1.1&lt;/version&gt;
+  &lt;/dependency&gt;
+  &lt;!-- Spring整合mybatis坐标 --&gt;
+  &lt;dependency&gt;
+   &lt;groupId&gt;org.mybatis&lt;/groupId&gt;
+   &lt;artifactId&gt;mybatis-spring&lt;/artifactId&gt;
+   &lt;version&gt;1.1.1&lt;/version&gt;
+  &lt;/dependency&gt;
+    &lt;dependency&gt;
+      &lt;groupId&gt;javax.servlet&lt;/groupId&gt;
+      &lt;artifactId&gt;jstl&lt;/artifactId&gt;
+      &lt;version&gt;1.2&lt;/version&gt;
+      &lt;scope&gt;provided&lt;/scope&gt;
+    &lt;/dependency&gt;
+    &lt;dependency&gt;
+      &lt;groupId&gt;javax.servlet.jsp&lt;/groupId&gt;
+      &lt;artifactId&gt;jsp-api&lt;/artifactId&gt;
+      &lt;version&gt;2.1&lt;/version&gt;
+      &lt;scope&gt;provided&lt;/scope&gt;
+    &lt;/dependency&gt;
+    &lt;dependency&gt;
+      &lt;groupId&gt;org.glassfish&lt;/groupId&gt;
+      &lt;artifactId&gt;javax.annotation&lt;/artifactId&gt;
+      &lt;version&gt;3.0.1&lt;/version&gt;
+    &lt;/dependency&gt;
+    &lt;dependency&gt;
+      &lt;groupId&gt;org.glassfish&lt;/groupId&gt;
+      &lt;artifactId&gt;javax.ejb&lt;/artifactId&gt;
+      &lt;version&gt;3.0.1&lt;/version&gt;
+    &lt;/dependency&gt;
+    &lt;dependency&gt;
+      &lt;groupId&gt;org.jboss.weld&lt;/groupId&gt;
+      &lt;artifactId&gt;weld-osgi-bundle&lt;/artifactId&gt;
+      &lt;version&gt;1.0.1-SP3&lt;/version&gt;
+    &lt;/dependency&gt;
+    &lt;dependency&gt;
+      &lt;groupId&gt;org.glassfish&lt;/groupId&gt;
+      &lt;artifactId&gt;javax.servlet&lt;/artifactId&gt;
+      &lt;version&gt;3.0.1&lt;/version&gt;
+    &lt;/dependency&gt;
+    &lt;!-- whl --&gt;
+    &lt;dependency&gt;
+    &lt;groupId&gt;commons-io&lt;/groupId&gt;
+    &lt;artifactId&gt;commons-io&lt;/artifactId&gt;
+    &lt;version&gt;2.4&lt;/version&gt;
+&lt;/dependency&gt;
+&lt;dependency&gt;
+    &lt;groupId&gt;commons-beanutils&lt;/groupId&gt;
+    &lt;artifactId&gt;commons-beanutils&lt;/artifactId&gt;
+    &lt;version&gt;1.7.0&lt;/version&gt;
+&lt;/dependency&gt;
+&lt;dependency&gt;
+    &lt;groupId&gt;net.sf.ezmorph&lt;/groupId&gt;
+    &lt;artifactId&gt;ezmorph&lt;/artifactId&gt;
+    &lt;version&gt;1.0.6&lt;/version&gt;
+&lt;/dependency&gt;
+&lt;dependency&gt;
+    &lt;groupId&gt;org.json&lt;/groupId&gt;
+    &lt;artifactId&gt;json&lt;/artifactId&gt;
+    &lt;version&gt;20160810&lt;/version&gt;
+&lt;/dependency&gt;
+&lt;dependency&gt;
+    &lt;groupId&gt;commons-lang&lt;/groupId&gt;
+    &lt;artifactId&gt;commons-lang&lt;/artifactId&gt;
+    &lt;version&gt;2.5&lt;/version&gt;
+&lt;/dependency&gt;
+&lt;dependency&gt;
+    &lt;groupId&gt;commons-collections&lt;/groupId&gt;
+    &lt;artifactId&gt;commons-collections&lt;/artifactId&gt;
+    &lt;version&gt;3.1&lt;/version&gt;
+&lt;/dependency&gt;
+&lt;dependency&gt;  
+    &lt;groupId&gt;com.alibaba&lt;/groupId&gt;  
+    &lt;artifactId&gt;fastjson&lt;/artifactId&gt;  
+    &lt;version&gt;1.2.41&lt;/version&gt;  
+&lt;/dependency&gt;
+</code></pre><h3 id="框架搭建">框架搭建</h3>
+<p>我们用的是SSM框架，具体的搭建方法，当时我也是在CSDN学习了一会，这里附上一个学习的链接：<a href="https://blog.csdn.net/qq_36876210/article/details/88074659">SSM框架搭建学习</a>。</p>
+<h3 id="jsp">JSP</h3>
+<p>页面展示上面就有，也没用到什么高级的前端开发技巧，基本上会一些HTML、CSS、JS这些就能照猫画虎的写出来。如果HTML这些没怎么学过的话，在CSDN搜一些相关教学学一下就行了，这里我就不多做赘述，也可以不写CSS这些样式文件，写写JSP测试页面就行，能进行测试运行就行。</p>
+                </section>
+            </article>
+
+            
+
+            
+                <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'your_disqus_short_name'; 
+
+     
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+
+            
+
+            
+
+            <footer id="footer">
+    
+        <div id="social">
+
+	
+	
+    <a class="symbol" href="https://github.com/Jikey">
+        <i class="fa fa-github-square"></i>
+    </a>
+    
+
+
+</div>
+
+    
+    <p class="small">
+        行动，从来不需要等到什么好天气好状态，此时此刻就是永远，此时此刻就是一切。
+    </p>
+    <p class="small">
+    
+       © Copyright 2020 <i class="fa fa-heart" aria-hidden="true"></i> 各行棋道丶
+    
+    </p>
+</footer>
+
+        </section>
+
+        <script src="https://Jikeyyy.github.io/js/jquery-3.3.1.min.js"></script>
+<script src="https://Jikeyyy.github.io/js/main.js"></script>
+<script src="https://Jikeyyy.github.io/js/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'your_google_analytics_id', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+
+
+
+
+    </body>
+</html>

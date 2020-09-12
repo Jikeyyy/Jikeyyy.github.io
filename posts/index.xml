@@ -6,10 +6,28 @@
     <description>Recent content in Posts on 各行棋道丶- 明朝即长路 惜取此时心</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sun, 05 Apr 2020 14:40:29 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 12 Sep 2020 17:00:13 +0800</lastBuildDate>
     
 	<atom:link href="https://Jikeyyy.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>基于SSM框架的校园二手交易平台实战记录（二）</title>
+      <link>https://Jikeyyy.github.io/posts/%E5%9F%BA%E4%BA%8Essm%E6%A1%86%E6%9E%B6%E7%9A%84%E6%A0%A1%E5%9B%AD%E4%BA%8C%E6%89%8B%E4%BA%A4%E6%98%93%E5%B9%B3%E5%8F%B0%E5%AE%9E%E6%88%98%E8%AE%B0%E5%BD%95%E4%BA%8C/</link>
+      <pubDate>Sat, 12 Sep 2020 17:00:13 +0800</pubDate>
+      
+      <guid>https://Jikeyyy.github.io/posts/%E5%9F%BA%E4%BA%8Essm%E6%A1%86%E6%9E%B6%E7%9A%84%E6%A0%A1%E5%9B%AD%E4%BA%8C%E6%89%8B%E4%BA%A4%E6%98%93%E5%B9%B3%E5%8F%B0%E5%AE%9E%E6%88%98%E8%AE%B0%E5%BD%95%E4%BA%8C/</guid>
+      <description>&lt;p&gt;这篇文章主要是进行一个实战记录，方便自己以后回顾，也顺便分享我自己的项目开发历程，也希望能帮到像我一样的小白，文章中如有错误，希望大佬能够指出，感谢。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>基于SSM框架的校园二手交易平台实战记录（一）</title>
+      <link>https://Jikeyyy.github.io/posts/%E5%9F%BA%E4%BA%8Essm%E6%A1%86%E6%9E%B6%E7%9A%84%E6%A0%A1%E5%9B%AD%E4%BA%8C%E6%89%8B%E4%BA%A4%E6%98%93%E5%B9%B3%E5%8F%B0%E5%AE%9E%E6%88%98%E8%AE%B0%E5%BD%95%E4%B8%80/</link>
+      <pubDate>Sat, 12 Sep 2020 16:59:35 +0800</pubDate>
+      
+      <guid>https://Jikeyyy.github.io/posts/%E5%9F%BA%E4%BA%8Essm%E6%A1%86%E6%9E%B6%E7%9A%84%E6%A0%A1%E5%9B%AD%E4%BA%8C%E6%89%8B%E4%BA%A4%E6%98%93%E5%B9%B3%E5%8F%B0%E5%AE%9E%E6%88%98%E8%AE%B0%E5%BD%95%E4%B8%80/</guid>
+      <description>&lt;p&gt;这篇文章主要是进行一个实战记录，方便自己以后回顾，也顺便分享我自己的项目开发历程，也希望能帮到像我一样的小白，文章中如有错误，希望大佬能够指出，感谢。&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Hugo博客部署到GitHub无法显示CSS、JS踩坑</title>
